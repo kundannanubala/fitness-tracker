@@ -1,6 +1,5 @@
-// App.js
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Dashboard from './pages/Dashboard';
@@ -19,17 +18,17 @@ const App = () => {
       <div className="app">
         <Header />
         <main>
-          <Switch>
-            <Route exact path="/" component={Dashboard} />
-            <Route path="/activity" component={ActivityLogging} />
-            <Route path="/goals" component={GoalSetting} />
-            <Route path="/progress" component={ProgressTracking} />
-            <Route path="/workouts" component={WorkoutPlans} />
-            <Route path="/wearables" component={WearableIntegration} />
-            <Route path="/nutrition" component={NutritionTracking} />
-            <Route path="/login" component={Login} />
-            <Route path="/register" component={Register} />
-          </Switch>
+          <Routes>
+            <Route exact path="/" element={<Dashboard />} />
+            <Route path="/activity" element={<ActivityLogging />} />
+            <Route path="/goals" element={<GoalSetting />} />
+            <Route path="/progress" element={<ProgressTracking />} />
+            <Route path="/workouts" element={<WorkoutPlans />} />
+            <Route path="/wearables" element={<WearableIntegration />} />
+            <Route path="/nutrition" element={<NutritionTracking />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
+          </Routes>
         </main>
         <Footer />
       </div>

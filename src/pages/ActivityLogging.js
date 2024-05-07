@@ -10,7 +10,7 @@ const ActivityLogging = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('/api/activities', { activityType, duration, date });
+      await axios.post('http://localhost:5000/api/activities', { activityType, duration, date });
       // Handle successful activity logging, e.g., clear form, show success message
     } catch (error) {
       // Handle activity logging error, e.g., display error message
