@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 // Replace this with your actual MongoDB connection string
-const connectionString = 'mongodb://localhost:27017/HealthTracker';
+const connectionString = 'mongodb://0.0.0.0:27017/HealthTracker';
 
 const connectToDatabase = async () => {
   try {
